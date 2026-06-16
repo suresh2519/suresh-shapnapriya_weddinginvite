@@ -1,0 +1,1 @@
+# Wedding Django project package.
