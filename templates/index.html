@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suresh ♾ Shapna Priy — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Noto+Sans+Tamil:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+</head>
+<body>
+  <div id="cursor"></div>
+  <div id="petal-wrap"></div>
+  <audio id="openAudio" src="{% static 'audio/opening-song.mp3' %}" preload="auto" loop></audio>
+ 
+  <section id="env-scene" class="env-scene">
+    <div class="kolam-bg"></div>
+    <div class="env-header">
+      <span class="env-pre">✿ 🌺 🌿</span>
+      <span class="env-pre">S</span>
+      <span class="env-pre-script">A Wedding Invitation</span>
+    </div>
+
+    <div class="env-stack">
+      <div class="env-wrap" id="envWrap" role="button" aria-label="Open invitation" tabindex="0">
+        <div class="env-body">
+          <div class="env-left"></div>
+          <div class="env-right"></div>
+          <div class="env-bottom"></div>
+          <div class="env-flap"></div>
+          <div class="wax-seal">
+            <div class="wax-inner">
+              <span class="wax-glyph">S ∞ S</span>
+              <span class="wax-sub">2026</span>
+            </div>
+          </div>
+          <div class="env-card" id="envCard">
+            <span class="ec-ganesh">🙏</span>
+            <span class="ec-tag">✦ Save the Date ✦</span>
+            <div class="ec-names">
+              <span class="ec-name">Suresh</span>
+              <span class="ec-name"> ♾ </span>
+              <span class="ec-name">Shapna Priya</span>
+            </div>
+            <span class="ec-inf">24th & 25th June · 2026 · Chennai</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tap-hint">🪔 Tap to Open 🪔</div>
+      <div class="env-foot">Chennai · 24th & 25th May 2026</div>
+    </div>
+  </section>
+
+  <main id="invite">
+    <section id="hero" class="sec s-ivory">
+      <div class="h-corner">✿</div>
+      <span class="hero-ganesha">🪔 A Wedding Invitation</span>
+      <span class="hero-tag">✦ Sri Ganeshaya Namaha ✦</span>
+      <div class="mono-disc">
+        <span class="mono-letters">S ∞ S</span>
+        <span class="mono-lbl">FOREVER & ALWAYS</span>
+      </div>
+      <p class="hero-from">Mr. M.Venkatesan & Mrs. V.Bhavani joyfully request the honour of your presence for the wedding of their son</p>
+      <h1 class="hero-name">V.Suresh<h3>B.E</h3></h1>
+      <span class="hero-amp">weds</span>
+      <h1 class="hero-name">S.Shapna Priya<h3>B.E</h3></h1> 
+      <p class="hero-date">24th & 25th May 2026</p>
+      <p class="hero-venue">Perarignar Anna Thirumana Mandapam · No. 1 Jambulingam Main Road, GKM Colony,(Near: Perambur Logo Railway Station) Chennai – 600082</p>
+      <p class="hero-parents">S/o. Mr. M.Venkatesan & Mrs. V.Bhavani · D/o. Mr. V.Srinivasan Ramanujadasar & Mrs. C.N.Anandhi</p>
+      <p class="hero-quote">“ Two souls, one beautiful journey — a promise of love, laughter, and forever ”</p>
+      <div class="scroll-hint">
+        <span class="scroll-line"></span>
+        <span class="scroll-txt">scroll</span>
+      </div>
+    </section>
+
+    <section class="sec s-teal" id="countdown">
+      <span class="eyebrow">✦ Until They Say I Do ✦</span>
+      <h2 class="h2">Counting Down</h2>
+      <div class="cd-grid">
+        <div class="cd-box"><span class="cd-num" id="days">00</span><span class="cd-lbl">Days</span></div>
+        <div class="cd-box"><span class="cd-num" id="hours">00</span><span class="cd-lbl">Hours</span></div>
+        <div class="cd-box"><span class="cd-num" id="minutes">00</span><span class="cd-lbl">Mins</span></div>
+        <div class="cd-box"><span class="cd-num" id="seconds">00</span><span class="cd-lbl">Secs</span></div>
+      </div>
+      <p class="tamil">காலை நேரம் — 9:00 · ஜூன் 25, 2026 · சென்னை</p>
+    </section>
+
+    <section class="sec s-gold">
+      <span class="eyebrow">✦ The Couple ✦</span>
+      <h2 class="h2">Suresh ♾ Shapna Priya</h2>
+      <div class="couple-wrap">
+        <div class="couple-grid">
+          <article class="p-card">
+            <span class="p-role">Groom 🤵</span>
+            
+            <h3 class="p-name">V.Suresh</h3>
+            <span class="p-prefix">B.E</span>
+            <p class="p-job">Software Engineer</p>
+            <p class="p-parents">S/o. Mr. M.Venkatesan & Mrs. V.Bhavani</p>
+            <span class="card-lotus">🌸</span>
+          </article>
+
+          <div class="weds-orb">
+            <span class="weds-sym">∞</span>
+            <span class="weds-lbl">weds</span>
+          </div>
+
+          <article class="p-card">
+            <span class="p-role">Bride 👰</span>
+            
+            <h3 class="p-name">S.Shapna Priya</h3>
+            <span class="p-prefix">B.E</span>
+            <p class="p-job">Operations & Administrative Specialist</p>
+            <p class="p-parents">D/o. Mr. V.Srinivasan Ramanujadasar & Mrs. C.N.Anandhi</p>
+            <span class="card-lotus">🪷</span>
+          </article>
+        </div>
+      </div>
+      <p class="hero-quote">இறு உள்ளங்கள் ஒரு பயணம் — அன்பும் ஆனந்தமும் என்றும் நிலைக்கட்டும்</p>
+    </section>
+
+    <section class="sec s-linen">
+      <span class="eyebrow">✦ Wedding Celebrations ✦</span>
+      <h2 class="h2">The Events</h2>
+      <div class="ev-grid">
+        <article class="ev-card">
+          <span class="ev-icon">💍</span>
+          <span class="ev-type">Reception</span>
+          <span class="ev-dow">Wednesday</span>
+          <span class="ev-day">24</span>
+          <span class="ev-month">June</span>
+          <span class="ev-year">2026</span>
+          <span class="ev-time">6:30 pm onwards</span>
+        </article>
+        <article class="ev-card muhurtham">
+          <span class="ev-icon">🌸</span>
+          <span class="ev-type">Muhurtham</span>
+          <span class="ev-dow">Thursday</span>
+          <span class="ev-day">25</span>
+          <span class="ev-month">June</span>
+          <span class="ev-year">2026</span>
+          <span class="ev-time">7:30 am — 9:00 am</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec s-blush">
+      <span class="eyebrow">✦ With Our Blessings ✦</span>
+      <h2 class="h2">Photo Moments</h2>
+      <div class="gal-grid">
+        <div class="gal-item gal-card-1"><img src="{% static 'images/SHAPNASURESH.jpeg' %}" alt="Suresh & Shapna Priya" class="gal-img"></div>
+        <div class="gal-item gal-card-2"><img src="{% static 'images/IMG_8033.jpeg' %}" alt="Suresh & Shapna Priya" class="gal-img"></div>
+        <div class="gal-item gal-card-3"><img src="{% static 'images/IMG_8034.jpeg' %}" alt="Suresh & Shapna Priya" class="gal-img"></span></div>
+        <div class="gal-item gal-card-4"><img src="{% static 'images/IMG_8036.jpeg' %}" alt="Suresh & Shapna Priya" class="gal-img"></span></div>
+        <div class="gal-item gal-card-5"><img src="{% static 'images/IMG_8039.jpeg' %}" alt="Suresh & Shapna Priya" class="gal-img"></span></div>
+      </div>
+      <p class="hero-quote">📸 Suresh & Shapna Priya</p>
+    </section>
+
+    <section class="sec s-ivory">
+      <span class="eyebrow">✦ Find Us ✦</span>
+      <h2 class="h2">Venue</h2>
+      <div class="venue-box">
+        <span class="venue-name">Perarignar Anna Thirumana Mandapam</span>
+        <p class="venue-addr">No.1 Jambulingam Main Road, GKM Colony,(Near: Perambur Logo Railway Station) Chennai – 600082</p>
+        <a class="map-btn" href="https://maps.app.goo.gl/NEYKnUULnR5RHSSE9" target="_blank" rel="noreferrer">📍 Open in Google Maps</a>
+      </div>
+    </section>
+
+    <section class="sec s-teal">
+      <span class="eyebrow">💌 Kindly Respond</span>
+      <h2 class="h2">Will You Join Us?</h2>
+      <p class="hero-quote">"We look forward to celebrating with you"</p>
+      <form class="rsvp-form" id="rsvpForm">
+        {% csrf_token %}
+        <input class="fi" type="text" name="name" placeholder="Your Name" required />
+        <input class="fi" type="tel" name="phone" placeholder="Phone / WhatsApp" required />
+        <select class="fsel" name="guests" required>
+          <option value="">Number of Guests</option>
+          <option value="1">Just me (1)</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4+ Guests</option>
+        </select>
+        <textarea class="fta" name="wishes" rows="3" placeholder="Your Wishes (optional)"></textarea>
+        <div class="rsvp-btns">
+          <button class="btn-yes" type="submit">✓ Joyfully Accept</button>
+          <button class="btn-no" type="button" id="regretBtn">✗ Regretfully Decline</button>
+        </div>
+        <a class="btn-wa" href="https://wa.me/?text=RSVP%20for%20Suresh%20%26%20Shapna%20Priya%20Wedding%20%F0%9F%AA%B7%20June%202026" target="_blank" rel="noreferrer">💬 RSVP via WhatsApp</a>
+      </form>
+      <div class="success-box" id="successBox">
+        <p>Thank you! Your response has been noted.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="f-blob1"></div>
+    <div class="f-blob2"></div>
+    <h2 class="f-names">Suresh ♾ Shapna Priya</h2>
+    <p class="f-date">24th & 25th June 2026 · Chennai</p>
+    <div class="f-div"></div>
+    <p class="f-closing">With love, laughter, and family blessings.</p>
+    <p class="f-brand">Designed for <span>S&S Wedding</span></p>
+    <div class="f-flowers"><span class="ff">🪷</span><span class="ff">🌿</span><span class="ff">🌸</span></div>
+  </footer>
+
+  <script src="{% static 'script.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
+</body>
+</html>

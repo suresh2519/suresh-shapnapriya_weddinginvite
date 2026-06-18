@@ -8,4 +8,4 @@ A static website clone of the invitation page from https://sanjaivarmanwedsharsh
 - `script.js` — envelope open interaction, countdown, and RSVP behavior
 
 ## Run locally
-Open `index.html` in a browser.
+Open `index.html` in a browser.    
