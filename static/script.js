@@ -110,9 +110,38 @@ function startCountdown() {
 
 rsvpForm.addEventListener('submit', event => {
   event.preventDefault();
-  rsvpForm.style.display = 'none';
-  successBox.style.display = 'block';
-  successBox.innerHTML = '<p>Thank you! Your response has been noted.</p>';
+  
+  // Get CSRF token from the form
+  const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+  
+  // Collect form data
+  const formData = {
+    name: document.querySelector('input[name="name"]').value,
+    phone: document.querySelector('input[name="phone"]').value,
+    guests: document.querySelector('select[name="guests"]').value,
+    wishes: document.querySelector('textarea[name="wishes"]').value
+  };
+  
+  // Send data to backend
+  fetch('/submit/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRFToken': csrfToken
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    rsvpForm.style.display = 'none';
+    successBox.style.display = 'block';
+    successBox.innerHTML = '<p>' + (data.message || 'Thank you! Your response has been noted.') + '</p>';
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    successBox.style.display = 'block';
+    successBox.innerHTML = '<p style="color: red;">Error submitting RSVP. Please try again.</p>';
+  });
 });
 
 regretBtn.addEventListener('click', () => {
