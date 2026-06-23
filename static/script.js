@@ -110,32 +110,9 @@ function startCountdown() {
 
 rsvpForm.addEventListener('submit', event => {
   event.preventDefault();
-  const formData = new FormData(rsvpForm);
-  const data = {
-    name: formData.get('name'),
-    phone: formData.get('phone'),
-    guests: formData.get('guests'),
-    wishes: formData.get('wishes')
-  };
-  fetch('/submit/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]')?.value || ''
-    },
-    body: JSON.stringify(data)
-  })
-  .then(response => response.json())
-  .then(result => {
-    rsvpForm.style.display = 'none';
-    successBox.style.display = 'block';
-    successBox.innerHTML = `<p>${result.message}</p>`;
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    successBox.innerHTML = '<p>Sorry, there was an error. Please try again.</p>';
-    successBox.style.display = 'block';
-  });
+  rsvpForm.style.display = 'none';
+  successBox.style.display = 'block';
+  successBox.innerHTML = '<p>Thank you! Your response has been noted.</p>';
 });
 
 regretBtn.addEventListener('click', () => {
